@@ -28,3 +28,6 @@ function App() {
 }
 ReactDOM.render(
     <App/>, document.getElementById('root'));
+
+// props的只读性
+
