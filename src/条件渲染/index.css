@@ -1,0 +1,10 @@
+.index{
+    /* color:red; */
+    animation: ColorChange infinite 2s linear;
+    animation-direction:alternate;
+    -webkit-animation-direction:alternate;
+}
+@keyframes ColorChange{
+    from{color:#222;opacity: 0}
+    to{color:black;opacity: 0.8}
+}
