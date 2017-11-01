@@ -13,6 +13,8 @@ import NumberList from "./列表&keys"
 import AllForm from "./表单"
 // 状态提升
 import Calculator from "./状态提升"
+// 组合vs继承
+import WelcomeDialogS from "./组合vs继承"
 class App extends Component {                                                                     
   render() {
     return (
@@ -23,7 +25,8 @@ class App extends Component {
         {/* <LoginControl isLoggedIn={false}/> */}
         {/* <NumberList numbers={numbers}/> */}
         {/* <AllForm/> */}
-        <Calculator/>
+        {/* <Calculator/> */}
+        <WelcomeDialogS/>
       </div>
     );
   }
