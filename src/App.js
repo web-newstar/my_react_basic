@@ -15,6 +15,10 @@ import AllForm from "./表单"
 import Calculator from "./状态提升"
 // 组合vs继承
 import WelcomeDialogS from "./组合vs继承"
+// React理念
+import FilterableProductTable from "./React理念"
+// 高级指引/refs&dom
+import CustomTextInput from "./高级指引/refs&&dom"
 class App extends Component {                                                                     
   render() {
     return (
@@ -26,12 +30,13 @@ class App extends Component {
         {/* <NumberList numbers={numbers}/> */}
         {/* <AllForm/> */}
         {/* <Calculator/> */}
-        <WelcomeDialogS/>
+        {/* <WelcomeDialogS/> */}
+        {/* <FilterableProductTable/> */}
+        <CustomTextInput/>
       </div>
     );
   }
 }
-
 const numbers = [1, 2, 3, 4];
 
 export default App;
