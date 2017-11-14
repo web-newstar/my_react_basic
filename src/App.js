@@ -22,7 +22,7 @@ import Grandparent from "./高级指引/refs&&dom"
 // 高级指引/非受控组件
 import NameForm from "./高级指引/非受控组件"
 // 高级指引/性能优化
-import CounterButton from "./高级指引/性能优化"
+import WordAdder from "./高级指引/性能优化"
 class App extends Component {                                                                     
   render() {
     return (
@@ -38,7 +38,7 @@ class App extends Component {
         {/* <FilterableProductTable/> */}
         {/* <Grandparent/> */}
         <NameForm/>
-        <CounterButton/>
+        <WordAdder/>
       </div>
     );
   }
