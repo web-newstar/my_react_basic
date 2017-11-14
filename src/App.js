@@ -18,7 +18,11 @@ import WelcomeDialogS from "./组合vs继承"
 // React理念
 import FilterableProductTable from "./React理念"
 // 高级指引/refs&dom
-import CustomTextInput from "./高级指引/refs&&dom"
+import Grandparent from "./高级指引/refs&&dom"
+// 高级指引/非受控组件
+import NameForm from "./高级指引/非受控组件"
+// 高级指引/性能优化
+import CounterButton from "./高级指引/性能优化"
 class App extends Component {                                                                     
   render() {
     return (
@@ -32,7 +36,9 @@ class App extends Component {
         {/* <Calculator/> */}
         {/* <WelcomeDialogS/> */}
         {/* <FilterableProductTable/> */}
-        <CustomTextInput/>
+        {/* <Grandparent/> */}
+        <NameForm/>
+        <CounterButton/>
       </div>
     );
   }
