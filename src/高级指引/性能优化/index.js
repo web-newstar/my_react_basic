@@ -48,11 +48,17 @@ class ListOfWords extends React.PureComponent {
     }
 }
 /*大部分情况下，你可以使用React.PureComponent而不必写你自己的shouldComponentUpdate，它只做一个浅比较。但是由于浅比较会忽略属性或状态突变的情况，此时你不能使用它。*/
+class AA extends React.Component{
+    render(){
+        return <div>12</div>
+    }
+}
 class WordAdder extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            words: ['marklar']
+            words: ['marklar'],
+            aa:[<AA/>]
         };
         this.handleClick = this
             .handleClick
@@ -67,20 +73,33 @@ class WordAdder extends React.Component {
         // this.setState({words: words});
 
         //  解决状态和属性的突变
-        this.setState((prevState)=>{
-            console.log(prevState);
-            //return {words:prevState.words.concat(["hello"])}
+        // this.setState((prevState)=>{
+        //     console.log(prevState);
+        //     //return {words:prevState.words.concat(["hello"])}
 
-            // ES6的写法
-            return {words:[...prevState.words,'hello']}
+        //     // ES6的写法
+        //     return {words:[...prevState.words,'hello']}
+        // })
+        // this.setState(pre=>{
+        //     pre.
+        // })
+        this.setState(function(pre){
+            pre.aa.push(<AA/>);
+            return {
+                aa:pre.aa
+            }
         })
     }
-
+    
     render() {
+        const arr=this.state.aa.map(item=>{
+            return item
+        })
         return (
             <div>
                 <button onClick={this.handleClick}>添加</button>
                 <ListOfWords words={this.state.words}/>
+                {arr}
             </div>
         );
     }
@@ -88,5 +107,7 @@ class WordAdder extends React.Component {
 
 // 不会突变的数据力量
 // 避免此类问题最简单的方式是避免使用值可能会突变的属性或状态。例如，上面例子中的handleClick应该用concat重写成：
+
+// 使用不可突变的数据结构
 
 export default WordAdder;
