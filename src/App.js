@@ -22,7 +22,11 @@ import Grandparent from "./高级指引/refs&&dom"
 // 高级指引/非受控组件
 import NameForm from "./高级指引/非受控组件"
 // 高级指引/性能优化
-import WordAdder from "./高级指引/性能优化"
+import WordAdder from "./高级指引/性能优化";
+// 高级指引/context
+import MessageList from "./高级指引/context"
+// 高级指引/webComponent
+import HelloMessage from "./高级指引/webComponent"
 class App extends Component {                                                                     
   render() {
     return (
@@ -37,12 +41,21 @@ class App extends Component {
         {/* <WelcomeDialogS/> */}
         {/* <FilterableProductTable/> */}
         {/* <Grandparent/> */}
-        <NameForm/>
-        <WordAdder/>
+        {/* <NameForm/> */}
+        {/* <WordAdder/> */}
+        {/* <MessageList message={message}/> */}
+        <HelloMessage/>
       </div>
     );
   }
 }
+const message=[
+  {text:'1'},
+  {text:'2'},    
+  {text:'3'},    
+  {text:'4'},    
+  
+]
 const numbers = [1, 2, 3, 4];
 
 export default App;
