@@ -6,8 +6,20 @@ Web组件为可重用组件提供了强大的封装能力，而React则是提供
 /*大部分使用React的开发者并不使用Web组件，但你可能想要，尤其若你正在使用那些用Web组件编写的第三方UI组件。*/
 import React from "react";
 class HelloMessage extends React.Component {
-    render() {
-      return <div>Hello <x-search>{this.props.name}</x-search>!</div>;
-    }
+  render() {
+    return <div>Hello
+      <x-search>{this.props.name}</x-search>!</div>;
   }
+}
+
+/*一个普遍的困扰是Web组件使用“class”而非“claassName”*/
+function BrickFlipbox() {
+  return (
+    <brick-flipbox class="demo">
+      <div>front</div>
+      <div>back</div>
+    </brick-flipbox>
+  );
+}
+/*在web组件中使用React*/
 export default HelloMessage;

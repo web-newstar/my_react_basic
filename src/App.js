@@ -26,7 +26,11 @@ import WordAdder from "./高级指引/性能优化";
 // 高级指引/context
 import MessageList from "./高级指引/context"
 // 高级指引/webComponent
-import HelloMessage from "./高级指引/webComponent"
+import HelloMessage from "./高级指引/webComponent";
+
+/*react路由*/
+import A from "./Router4.2.0/BrowserRouter";
+
 class App extends Component {                                                                     
   render() {
     return (
@@ -44,7 +48,8 @@ class App extends Component {
         {/* <NameForm/> */}
         {/* <WordAdder/> */}
         {/* <MessageList message={message}/> */}
-        <HelloMessage/>
+        {/* <HelloMessage/> */}
+        <A/>
       </div>
     );
   }
