@@ -30,7 +30,7 @@ import HelloMessage from "./高级指引/webComponent";
 
 /*react路由*/
 import A from "./Router4.2.0/BrowserRouter";
-
+import RouteIndex from "./Router4.2.0/Route"
 class App extends Component {                                                                     
   render() {
     return (
@@ -49,7 +49,8 @@ class App extends Component {
         {/* <WordAdder/> */}
         {/* <MessageList message={message}/> */}
         {/* <HelloMessage/> */}
-        <A/>
+        <RouteIndex/>
+        {/* <A/> */}
       </div>
     );
   }
