@@ -13,6 +13,7 @@ class RouteIndex extends React.Component {
                     <Link to="/contact">联系我们</Link>
                     <Link to="/other/react/router">关于</Link>
                     <Link to="/query/user?id=123&name=lt">query</Link>
+                    <Link to={{pathname:'/query/user',search:'?id=456&name=nini',states: { price: 18 }}}>query2</Link>
                     <Route exact path="/" component={Home}/>
                     <Route 
                         path="/about/:id"
@@ -60,7 +61,7 @@ const AddressBar=()=>{
         <Route  render={({ location:{pathname}, history})=>{
             console.log(history)
             return (
-                <div className="address-bar">
+                <div className="address-bar">   
                 <div>
                   <button
                     className="ab-button"

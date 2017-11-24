@@ -32,3 +32,24 @@ const FadingRoute = ({ component: Component, ...rest }) => (
       </FadeIn>
     )} />
   )
+<FadingRoute path="/cool" component={Something} />
+
+// children: func
+<ul>
+  <ListItemLink to="/somewhere" />
+  <ListItemLink to="/somewhere-ele" />
+</ul>
+
+const ListItemLink = ({ to, ...rest }) => (
+  <Route path={to} children={({ match }) => (
+    <li className={match ? 'active' : ''}>
+      <Link to={to} {...rest} />
+    </li>
+  )}
+)
+
+// exact: bool
+// 如果为 true，path 为 '/one' 的路由将不能匹配 '/one/two'，反之，亦然。
+
+// strict: bool
+// 对路径末尾斜杠的匹配。如果为 true。path 为 '/one/' 将不能匹配 '/one' 但可以匹配 '/one/two'。
